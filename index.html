@@ -46,7 +46,7 @@
                         <rect fill="rgba(0, 0, 0, 0)" id="canvas_background" height="34" width="34" y="-1" x="-1" />
                     </g>
                     <g>
-                        <path fill="var(--medium-color)" id="svg_1"
+                        <path fill="white" id="svg_1"
                             d="m4,10l24,0c1.104,0 2,-0.896 2,-2s-0.896,-2 -2,-2l-24,0c-1.104,0 -2,0.896 -2,2s0.896,2 2,2zm24,4l-24,0c-1.104,0 -2,0.896 -2,2s0.896,2 2,2l24,0c1.104,0 2,-0.896 2,-2s-0.896,-2 -2,-2zm0,8l-24,0c-1.104,0 -2,0.896 -2,2s0.896,2 2,2l24,0c1.104,0 2,-0.896 2,-2s-0.896,-2 -2,-2z" />
                     </g>
                 </svg>
@@ -62,7 +62,7 @@
             </div>
         </div>
     </header>
-    <div>
+    <div class="body">
         rest of the stuff goes here
     </div>
 </body>
@@ -98,8 +98,16 @@
     }
 </script>
 <style>
+    .body {
+        padding: 50px;
+    }
     .right-navbar * {
         display: block;
+    }
+    .nav-items * {
+        font-size: 25px !important;
+        margin-left: 20px;
+        color: #EDC229;
     }
     @font-face {
         font-family: 'main';
@@ -108,6 +116,8 @@
 
     body {
         font-family: "main" !important;
+        background-color: black;
+        color: white;
     }
 
     header button {
@@ -202,7 +212,7 @@
         min-width: 300px;
         max-width: 90vw;
         width: fit-content;
-        background-color: rgba(59, 44, 53, 0.9);
+        background-color: rgba(41, 237, 190, 0.25);
         position: absolute;
         padding-top: 100px;
         padding-left: 10px;
@@ -235,6 +245,9 @@
     }
 
     @media (min-width: 500px) {
+        header {
+            margin-top: 25px !important;
+        }
         .scroll-from-left {
             opacity: 0;
             position: relative;
