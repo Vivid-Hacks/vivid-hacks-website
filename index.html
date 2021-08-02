@@ -47,10 +47,7 @@
 					</g>
 				</svg>
 				<div class="logo">
-					<a href="./index.html"><span
-							style="color: var(--medium-color)" class="normal-font large-font code-font">
-							< </span><span class="flash">Joshua Zou</span><span style="color: var(--medium-color)"
-									class="normal-font large-font code-font">/></span></a>
+					<a href="./index.html"><img src="./static/images/logo.svg" class="logo"><span>Vivid hacks</span></a>
 				</div>
 			</div>
 			<div class="right-navbar">
@@ -64,7 +61,13 @@
 </body>
 </html>
 <style>
-
+ @font-face {
+    font-family: 'main';
+    src: url('./static/css/Castledown\ Discovery.ttf');
+  }
+body {
+    font-family: "main";
+}
 header button {
   border: none;
   background: none;
@@ -88,8 +91,8 @@ header .big-screen .nav-items * {
 header .mobile .logo {
   position: relative;
   left: 30%;
-  top: -40px;
-  height: 40px;
+  top: -20px;
+  height: 45px;
 }
 
 header .pancake-thingy svg {
