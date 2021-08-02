@@ -24,10 +24,203 @@
 </head>
 <body>
     <header>
-        header goes here
-    </header>
+		<div class="big-screen">
+			<div class="logo" onclick="window.location.href='./index.html'">
+				<img src="./static/images/logo.svg" class="logo">
+			</div>
+			<div class="nav-items">
+				<a href="./posts/main.html">Random Posts</a>
+			</div>
+		</div>
+		<div class="mobile">
+			<div class="top-bar">
+
+			</div>
+			<div class="pancake-thingy">
+				<svg width="32" height="32" xmlns="http://www.w3.org/2000/svg" onclick="toggleMobileNavbar();">
+					<g>
+						<rect fill="rgba(0, 0, 0, 0)" id="canvas_background" height="34" width="34" y="-1" x="-1" />
+					</g>
+					<g>
+						<path fill="var(--medium-color)" id="svg_1"
+							d="m4,10l24,0c1.104,0 2,-0.896 2,-2s-0.896,-2 -2,-2l-24,0c-1.104,0 -2,0.896 -2,2s0.896,2 2,2zm24,4l-24,0c-1.104,0 -2,0.896 -2,2s0.896,2 2,2l24,0c1.104,0 2,-0.896 2,-2s-0.896,-2 -2,-2zm0,8l-24,0c-1.104,0 -2,0.896 -2,2s0.896,2 2,2l24,0c1.104,0 2,-0.896 2,-2s-0.896,-2 -2,-2z" />
+					</g>
+				</svg>
+				<div class="logo">
+					<a href="./index.html"><span
+							style="color: var(--medium-color)" class="normal-font large-font code-font">
+							< </span><span class="flash">Joshua Zou</span><span style="color: var(--medium-color)"
+									class="normal-font large-font code-font">/></span></a>
+				</div>
+			</div>
+			<div class="right-navbar">
+				<a href="./posts/main.html" class="light-font-color medium-font">• Random Posts</a>
+			</div>
+		</div>
+	</header>
     <div>
         rest of the stuff goes here
     </div>
 </body>
 </html>
+<style>
+
+header button {
+  border: none;
+  background: none;
+}
+
+header .logo-text {
+  color: var(--red-color);
+  display: inline-block;
+  z-index: 1;
+  padding: 2em;
+  margin: -2em;
+  cursor: pointer;
+  height: 0px;
+}
+
+header .big-screen .nav-items * {
+  position: relative;
+  top: -10px;
+}
+
+header .mobile .logo {
+  position: relative;
+  left: 30%;
+  top: -40px;
+  height: 40px;
+}
+
+header .pancake-thingy svg {
+  transform: translate(0, 5px);
+}
+
+header a {
+  color: var(--alt-text-color);
+  text-decoration: none;
+}
+
+header .logo {
+  text-align: left;
+  font-family: "poiretOne";
+  font-size: 30px;
+  color: var(--medium-color) !important;
+  width: 75px;
+  cursor: pointer;
+}
+
+header .nav-items {
+  width: fit-content;
+  text-align: right;
+  position: absolute;
+  top: 40px;
+  right: 50px;
+}
+
+header .big-screen {
+  font-size: 30px;
+  min-height: 75px;
+  padding-top: 20px;
+  padding-left: 40px;
+  padding-right: 50px;
+  background-color: #282828;
+  background-color: var(--dark-background-color);
+}
+
+header .mobile {
+  padding-left: 10px;
+  padding-top: 10px;
+}
+
+header .pancake-thingy {
+  z-index: 69;
+  position: absolute;
+}
+
+header .top-bar {
+  z-index: -1;
+  top: -61px;
+  left: 0;
+  position: absolute;
+  width: 100vw;
+  height: 60px;
+  transition: ease-in-out, 0.5s;
+  background-color: var(--dark-background-color);
+}
+
+header .mobile .right-navbar {
+  left: -500px;
+  transition: ease-in-out, 0.5s;
+  top: 0px;
+  height: 89.7vh;
+  min-width: 300px;
+  max-width: 90vw;
+  width: fit-content;
+  background-color: rgba(59, 44, 53, 0.9);
+  position: absolute;
+  padding-top: 100px;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: whitesmoke !important;
+  z-index: 2;
+}
+
+@media (max-width: 500px) {
+  .medium-font {
+    font-size: 20px;
+  }
+  header .big-screen {
+    display: none;
+  }
+  header .top-bar {
+    top: 0;
+  }
+  .side-by-side {
+    margin-top: 10px;
+    float: none;
+  }
+}
+
+@media (min-width: 500px) {
+  .scroll-from-left {
+    opacity: 0;
+    position: relative;
+  }
+  .left-scroll-element {
+    opacity: 1;
+    animation: animation-left 0.9s;
+    animation-timing-function: ease;
+  }
+  header .pancake-thingy {
+    display: none;
+  }
+  .side-by-side {
+    float: left;
+  }
+  .scroll-from-right {
+    opacity: 0;
+  }
+  .right-scroll-element {
+    opacity: 1;
+    animation: animation-right 0.9s;
+  }
+}
+
+.break {
+  flex-basis: 100%;
+  height: 0;
+}
+
+header .flash {
+  color: whitesmoke;
+  color: var(--text-color);
+}
+
+header .flash, header .flash * {
+  -webkit-animation: cray 15s infinite steps(50);
+  animation: cray 15s infinite steps(50);
+  display: inline-block;
+}
+
+</style>
