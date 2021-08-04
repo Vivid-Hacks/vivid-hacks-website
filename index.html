@@ -134,8 +134,41 @@
 
         </section>
         <section id="faqs">
-            FAQs
+            <span class="bigfont side-by-side">FAQs:</span>
+            <div class="side-by-side content">
+                <div class="question">
+                    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit?</span>
+                    <div class="answer">
+                        odit fugiat iusto fuga praesentium optio, eaque rerum!
+                    </div>
+                </div>
+                <div class="question overline">
+                    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit?</span>
+                    <div class="answer">
+                        odit fugiat iusto fuga praesentium optio, eaque rerum!
+                    </div>
+                </div>
+                <div class="question overline">
+                    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit?</span>
+                    <div class="answer">
+                        odit fugiat iusto fuga praesentium optio, eaque rerum!
+                    </div>
+                </div>
+                <div class="question overline">
+                    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit?</span>
+                    <div class="answer">
+                        odit fugiat iusto fuga praesentium optio, eaque rerum!
+                    </div>
+                </div>
+                <div class="question overline">
+                    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit?</span>
+                    <div class="answer">
+                        odit fugiat iusto fuga praesentium optio, eaque rerum!
+                    </div>
+                </div>
+            </div>
         </section>
+
         <section class="footer" style="color: #BAFFEE !important;">
             <div class="container" style="font-size: 1.2em;">
                 <div>
@@ -188,8 +221,19 @@
 
 </html>
 <script>
+    let allQuestions = document.querySelectorAll("#faqs .question");
+    for (let p = 0; p < allQuestions.length; p++) {
+        allQuestions[p].children[1].classList.add("invisible");
+        allQuestions[p].children[0].innerHTML = '<i class="fas fa-plus-circle"></i> ' + allQuestions[p].children[0].innerHTML
+        allQuestions[p].addEventListener("click", function (event) {
+            this.children[1].classList.toggle("invisible");
+            this.children[1].classList.toggle("normal-height");
+            var contentHeight = $(allQuestions[p].children[1]).outerHeight(true) + 25;
+            $(allQuestions[p]).animate({ "height": contentHeight }, 200);
+        })
+    }
     let allLinks = document.querySelectorAll("a");
-    for (let i = 0; i<allLinks.length; i++){
+    for (let i = 0; i < allLinks.length; i++) {
         if (allLinks[i].getAttribute("href").startsWith("/") || allLinks[i].getAttribute("href").startsWith("#")) continue;
         allLinks[i].target = "_blank"
     }
@@ -222,9 +266,51 @@
     }
 </script>
 <style>
+    .fa-plus-circle {
+        color: #29EDBE;
+        font-size: 0.8em;
+    }
+
+    #faqs .content .question {
+        padding: 10px;
+    }
+
+    .overline::before {
+        content: "";
+        background: #ccc;
+        position: relative;
+        bottom: 25%;
+        left: 0;
+        height: 1px;
+        width: 100%;
+        max-width: 600px;
+        display: block;
+    }
+
+    #faqs {
+        margin-bottom: 100px;
+    }
+
+    #faqs .content .question .answer {
+        font-size: 0.8em;
+        color: #A3CCE3;
+        margin-top: 10px;
+        margin-left: 5%;
+    }
+
     @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@800&display=swap');
+
     html {
         scroll-behavior: smooth;
+    }
+
+    .invisible {
+        height: 0;
+        overflow: hidden;
+    }
+
+    .normal-height {
+        height: fit-content;
     }
 
     .footer {
@@ -244,6 +330,7 @@
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         font-family: 'Nunito', sans-serif !important;
     }
+
     .footer .container a {
         font-family: 'Nunito', sans-serif !important;
         color: #BAFFEE !important;
@@ -251,12 +338,15 @@
         margin-bottom: 10px;
         display: block;
     }
+
     .footer .container ul {
         list-style: none;
     }
+
     .footer .container ul li {
         transform: translateX(-50px);
     }
+
     .desktop-constrained {
         display: none !important;
     }
@@ -415,6 +505,10 @@
     }
 
     @media (max-width: 500px) {
+        #faqs {
+            margin-top: 50px;
+        }
+
         .whatis span {
             max-width: 100% !important;
             right: 0 !important;
@@ -475,6 +569,12 @@
 
 
     @media (min-width: 500px) {
+        #faqs .content {
+            margin-top: 70px;
+            margin-left: 100px;
+            font-size: 1.5em;
+        }
+
         .desktop-constrained {
             display: block !important;
         }
