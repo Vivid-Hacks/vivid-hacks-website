@@ -55,7 +55,6 @@ var modalOpen = false;
         var isClickInsideElement = document.querySelectorAll(".signup-modal")[0].contains(event.target);
         if (!isClickInsideElement) {
             document.querySelectorAll(".body")[0].classList.remove("opaque");
-            removeEvntLisnr(document.querySelectorAll(".body")[0]);
             document.querySelectorAll(".signup-modal")[0].classList.add('notvisible');
             modalOpen = false;
         }
