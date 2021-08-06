@@ -128,11 +128,17 @@
                 <span style="color: #E36C6C; font-weight: bold;">game-changing</span>. Something <span
                     style="color: #2DC2CC; font-weight: bold;">cutting edge</span>. Vivid Hacks is a weekend experience
                 you
-                won't want to miss. 😛</span>
+                won't want to miss. 😛
+                <br>
+                <div style="margin-top: 50px; margin-bottom: 20px;">
+                    <button class="glow-on-hover" type="button"
+                        style="margin-left: auto; margin-right: auto; display: block; border: #29EDBE solid 1px;"
+                        onclick="join();">JOIN THE WAITLIST!</button>
+                </div>
+            </span>
             <img src="./static/images/earth.png"
                 style="float: right; right: 20%; position: relative; max-width: 50%; display: block; transform: translateY(-50px);"
                 class="desktop-constrained">
-
         </section>
         <section id="faqs">
             <span class="bigfont side-by-side">FAQs:</span>
@@ -140,7 +146,8 @@
                 <div class="question">
                     <span>What is a hackathon?</span>
                     <div class="answer">
-                        A hackathon is an event where students come together to build and share something from scratch. You and a group of people will brainstorm an idea, and bring it to life during the event!
+                        A hackathon is an event where students come together to build and share something from scratch.
+                        You and a group of people will brainstorm an idea, and bring it to life during the event!
                     </div>
                 </div>
                 <div class="question overline">
@@ -218,6 +225,46 @@
             </div>
         </section>
     </div>
+    <div class="modals">
+        <div class="signup-modal notvisible">
+            <div class="container">
+                <span style="font-size: 1.5em; text-align: center; display: block;">Join our waitlist!</span>
+                <br>
+                <div class="input-field">
+                    <label for="signup-name">Name:</label>
+                    <br>
+                    <input type="text" style="margin-top: 10px;" id="signup-name">
+                    <label for="signup-name" style="color: rgb(255, 67, 67);">&nbsp;</label>
+                </div>
+                <div class="input-field">
+                    <label for="signup-email">Email:</label>
+                    <br>
+                    <input type="text" style="margin-top: 10px;" id="signup-email">
+                    <label for="signup-email" style="color: rgb(255, 67, 67);">&nbsp;</label>
+                </div>
+                <div class="input-field">
+                    <label for="signup-xp">Experience (from 1-10):</label>
+                    <br>
+                    <input type="number" style="margin-top: 10px;" id="signup-xp" min="0" max="10">
+                    <label for="signup-xp" style="color: rgb(255, 67, 67);">&nbsp;</label>
+                </div>
+                <br>
+                <div class="wrapper">
+                    <div class="link_wrapper">
+                        <a style="cursor: pointer;" onclick="sendForm();">Sign up!</a>
+                        <div class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 268.832 268.832">
+                                <path
+                                    d="M265.17 125.577l-80-80c-4.88-4.88-12.796-4.88-17.677 0-4.882 4.882-4.882 12.796 0 17.678l58.66 58.66H12.5c-6.903 0-12.5 5.598-12.5 12.5 0 6.903 5.597 12.5 12.5 12.5h213.654l-58.66 58.662c-4.88 4.882-4.88 12.796 0 17.678 2.44 2.44 5.64 3.66 8.84 3.66s6.398-1.22 8.84-3.66l79.997-80c4.883-4.882 4.883-12.796 0-17.678z" />
+                            </svg>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 <script type="text/javascript" src="./static/js/script.js"></script>
+
 </html>
