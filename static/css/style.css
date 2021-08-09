@@ -233,7 +233,7 @@ header .mobile .right-navbar {
   margin-top: 20px;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 800px) {
   .glow-on-hover:before {
     opacity: 100% !important;
   }
@@ -300,7 +300,7 @@ header .mobile .right-navbar {
   }
 }
 
-@media (min-width: 500px) {
+@media (min-width: 800px) {
   #faqs .content {
     margin-top: 70px;
     margin-left: 100px;
