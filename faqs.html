@@ -1,0 +1,1019 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Vivid Hacks</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <link rel='stylesheet' href='static/css/style.css'>
+        <link data-react-helmet="true" rel="icon" href="./static/images/logo.svg">
+    
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+        <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    
+        <meta name="keywords" content="">
+        <meta name="description" content="">
+        <meta name="robots" content="noindex">
+    
+    
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,minimal-ui">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="default">
+        <link rel="icon" href="./static/images/logo.svg">
+    
+    </head>
+    <section id="faqs">
+        <span class="bigfont side-by-side">FAQs:</span>
+        <div class="side-by-side content">
+            <div class="question">
+                <span>What is a hackathon?</span>
+                <div class="answer">
+                    Simply put, a hackathon is a programming competition! Entrants will have a theme and work over the weekend to build projects relating to it. They're a ton of fun!
+                </div>
+            </div>
+            <div class="question overline">
+                <span>Who is elgible to enter?</span>
+                <div class="answer">
+                    Anyone is welcome to enter! There are no restraints on age, geographic location, or level of experience. We encourage beginners to register, too!
+                </div>
+            </div>
+            <div class="question overline">
+                <span>How many people can form a team?</span>
+                <div class="answer">
+                    A team can be comprised of 1-5 people. If you want to work alone, you can indicate that on the form. Likewise, if you have a team or want to be on one, you'll be able to work in a group!
+                </div>
+            </div>
+            <div class="question overline">
+                <span>What will the topic be?</span>
+                <div class="answer">
+                    The topic will be realeased the first day of the event at the opening ceremony! This way, everyone has the same amount of time to brainstorm and create.
+                </div>
+            </div>
+            <div class="question overline">
+                <span>Is the hackathon physical or online?</span>
+                <div class="answer">
+                    The hackathon will be virtual, both accomodating for concerns about COVID-19 and ensuring that it's as accessible to as many people as possible! Wherever you are, we'd love for you to come online with us.
+                </div>
+            </div>
+            <div class="question overline">
+                <span>What if I don't have a team?</span>
+                <div class="answer">
+                    There are two options for you! If you prefer to work alone, that's awesome, and you're able to do so. If you want to meet new people, we will work to coordinate teams of entrants who want to work with others.
+                </div>
+            </div>
+        </div>
+    </section>
+</html>
+<style>
+    .fa-plus-circle {
+  color: #29edbe;
+  font-size: 0.8em;
+}
+
+#faqs .content .question {
+  padding: 10px;
+}
+
+.overline::before {
+  content: "";
+  background: #ccc;
+  position: relative;
+  bottom: 25%;
+  left: 0;
+  height: 1px;
+  width: 100%;
+  max-width: 600px;
+  display: block;
+}
+
+#faqs {
+  margin-bottom: 100px;
+}
+
+#faqs .content .question .answer {
+  font-size: 0.8em;
+  color: #a3cce3;
+  margin-top: 10px;
+  margin-left: 5%;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@800&display=swap");
+html {
+  scroll-behavior: smooth;
+}
+
+.invisible {
+  height: 0;
+  overflow: hidden;
+}
+
+.normal-height {
+  height: fit-content;
+}
+
+.footer {
+  position: absolute;
+  left: 0;
+  transform: translateY(10px);
+  width: 99.14vw;
+  background-color: rgb(255, 255, 255);
+}
+
+.footer .container {
+  display: grid;
+  margin-left: 30px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  grid-gap: 5px 0px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  font-family: "Nunito", sans-serif !important;
+}
+
+.footer .container a {
+  font-family: "Nunito", sans-serif !important;
+  color: #1a1a1a !important;
+  text-decoration: none;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.footer .container ul {
+  list-style: none;
+}
+
+.footer .container ul li {
+  transform: translateX(-50px);
+}
+
+.desktop-constrained {
+  display: none !important;
+}
+
+body section {
+  overflow: hidden;
+}
+
+.flashing-underscore {
+  animation: flashing-underscore 0.75s infinite;
+}
+
+.body {
+  margin: 100px;
+}
+
+.right-navbar * {
+  display: block;
+}
+
+@keyframes flashing-underscore {
+  0% {
+    opacity: 100%;
+  }
+  75% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+.nav-items * {
+  font-size: 25px !important;
+  margin-left: 20px;
+  color: #ffffff;
+}
+
+@font-face {
+  font-family: "main";
+  src: url("./Castledown\ Discovery.ttf");
+}
+
+body {
+  font-family: "main" !important;
+  background-color: black;
+  color: whitesmoke;
+}
+
+header button {
+  border: none;
+  background: none;
+}
+
+header .logo-text {
+  color: var(--red-color);
+  display: inline-block;
+  z-index: 1;
+  padding: 2em;
+  margin: -2em;
+  cursor: pointer;
+  height: 0px;
+}
+
+header .big-screen .nav-items * {
+  position: relative;
+  top: -10px;
+}
+
+header .mobile .logo {
+  position: relative;
+  left: 30%;
+  top: -20px;
+  height: 45px;
+  width: 100%;
+}
+
+header .pancake-thingy svg {
+  transform: translate(0, 5px);
+}
+
+header a {
+  color: var(--alt-text-color);
+  text-decoration: none;
+}
+
+header .logo {
+  text-align: left;
+  font-family: "poiretOne";
+  font-size: 30px;
+  color: var(--medium-color) !important;
+  width: 75px;
+  cursor: pointer;
+}
+
+header .nav-items {
+  width: fit-content;
+  text-align: right;
+  position: absolute;
+  top: 40px;
+  right: 50px;
+}
+
+header .big-screen {
+  font-size: 30px;
+  min-height: 75px;
+  padding-left: 40px;
+  padding-right: 50px;
+  background-color: #282828;
+  background-color: var(--dark-background-color);
+}
+
+header .mobile {
+  padding-left: 10px;
+  padding-top: 10px;
+}
+
+header .pancake-thingy {
+  z-index: 69;
+  position: absolute;
+}
+
+header .top-bar {
+  z-index: -1;
+  top: -61px;
+  left: 0;
+  position: absolute;
+  width: 100vw;
+  height: 60px;
+  transition: ease-in-out, 0.5s;
+  background-color: var(--dark-background-color);
+}
+
+header .mobile .right-navbar {
+  left: -500px;
+  transition: ease-in-out, 0.5s;
+  top: 0px;
+  height: 89.7vh;
+  min-width: 300px;
+  max-width: 90vw;
+  width: fit-content;
+  background-color: rgba(41, 237, 190, 0.25);
+  position: absolute;
+  padding-top: 100px;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: whitesmoke !important;
+  z-index: 2;
+}
+
+.join-community-button {
+  margin-top: 20px;
+}
+
+@media (max-width: 800px) {
+  .glow-on-hover:before {
+    opacity: 100% !important;
+  }
+  .signup-modal {
+    width: 90vw !important;
+  }
+  #faqs {
+    margin-top: 50px;
+  }
+  /*.whatis {
+    font-size: 1.25em;
+    float: right;
+    right: 20%;
+    position: relative;
+    max-width: 50%;
+    display: block;
+    margin-top: 20px;
+  }*/
+  .whatis span {
+    max-width: 100% !important;
+    right: 0 !important;
+    line-height: 2;
+  }
+
+  .bigfont {
+    font-size: 2em;
+  }
+  section.intro {
+    overflow: visible !important;
+    padding-bottom: 230px;
+  }
+  .join-community-button {
+    transform: translateX(-55px);
+  }
+  .side-by-side {
+    margin-top: 10px;
+    float: none;
+  }
+  .medium-font {
+    font-size: 20px;
+  }
+  header .big-screen {
+    display: none;
+  }
+  header .top-bar {
+    top: 0;
+  }
+  .side-by-side {
+    margin-top: 10px;
+    float: none;
+  }
+  header {
+    height: 60px;
+  }
+  .intro-video {
+    position: absolute;
+    left: 10px;
+    width: 95vw;
+    height: 200px;
+    margin-top: 20px;
+  }
+}
+
+@media (min-width: 800px) {
+  #faqs .content {
+    margin-top: 70px;
+    margin-left: 100px;
+    font-size: 1.5em;
+  }
+  .desktop-constrained {
+    display: block !important;
+  }
+  .bigfont {
+    font-size: 3em;
+  }
+  .intro {
+    padding-bottom: 100px;
+  }
+  .intro-video {
+    position: absolute;
+    right: 80px;
+    height: 400px;
+    width: 50%;
+  }
+  .side-by-side {
+    float: left;
+  }
+  header {
+    margin-top: 25px !important;
+  }
+  .scroll-from-left {
+    opacity: 0;
+    position: relative;
+  }
+  .left-scroll-element {
+    opacity: 1;
+    animation: animation-left 0.9s;
+    animation-timing-function: ease;
+  }
+  header .pancake-thingy {
+    display: none;
+  }
+  .side-by-side {
+    float: left;
+  }
+  .scroll-from-right {
+    opacity: 0;
+  }
+  .right-scroll-element {
+    opacity: 1;
+    animation: animation-right 0.9s;
+  }
+}
+
+.break {
+  flex-basis: 100%;
+  height: 0;
+}
+
+header .flash {
+  color: whitesmoke;
+  color: var(--text-color);
+}
+
+header .flash,
+header .flash * {
+  -webkit-animation: cray 15s infinite steps(50);
+  animation: cray 15s infinite steps(50);
+  display: inline-block;
+}
+
+.main-body-logo {
+  width: 200px;
+}
+
+.glow-on-hover {
+  width: 220px;
+  height: 50px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+}
+
+.glow-on-hover:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+.glow-on-hover:active {
+  color: #000;
+}
+
+.glow-on-hover:active:after {
+  background: transparent;
+}
+
+.glow-on-hover:hover:before {
+  opacity: 1;
+}
+
+.glow-on-hover:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #111;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.signup-modal {
+  position: fixed;
+  width: 25%;
+  background-color: #1371aa;
+  z-index: 5;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  border-radius: 8px;
+  height: 325px;
+}
+
+.signup-modal input {
+  width: 100%;
+}
+
+.input-field {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2px;
+  width: 80%;
+  max-width: 300px;
+}
+.opaque {
+  opacity: 30%;
+}
+.notvisible {
+  display: none;
+}
+
+.wrapper {
+  position: fixed;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -130%);
+}
+
+.link_wrapper {
+  position: relative;
+}
+
+.wrapper a {
+  display: block;
+  width: 200px;
+  height: 45px;
+  line-height: 50px;
+  font-weight: bold;
+  text-decoration: none;
+  background: #333;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 3px solid #333;
+  transition: all 0.35s;
+}
+
+.wrapper .icon {
+  width: 40px;
+  height: 40px;
+  border: 3px solid transparent;
+  position: absolute;
+  transform: rotate(45deg);
+  right: 0;
+  top: 0;
+  z-index: -1;
+  transition: all 0.35s;
+}
+
+.icon svg {
+  width: 30px;
+  position: absolute;
+  top: calc(50% - 15px);
+  left: calc(50% - 15px);
+  transform: rotate(-45deg);
+  fill: #2ecc71;
+  transition: all 0.35s;
+}
+
+.wrapper a:hover {
+  width: 200px;
+  border: 3px solid #2ecc71;
+  background: transparent;
+  color: #2ecc71;
+}
+
+.wrapper a:hover + .icon {
+  border: 3px solid #2ecc71;
+  right: -25%;
+}
+
+/*footer*/
+footer {
+  background: rgb(243, 243, 243);
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
+footer::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 100px;
+  height: 1px;
+  width: 100%;
+  background: #000;
+}
+footer .content {
+  margin: 0 auto;
+  max-width: 1250px;
+  margin: auto;
+  padding: 30px 40px 40px 40px;
+}
+footer .content .top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+.content .top .logo-details {
+  color: rgb(3, 3, 3);
+  font-size: 30px;
+}
+.content .top .media-icons {
+  display: flex;
+}
+.content .top .media-icons a {
+  height: 40px;
+  width: 40px;
+  margin: 0 8px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  color: #fff;
+  font-size: 17px;
+  text-decoration: none;
+  transition: all 0.4s ease;
+}
+.top .media-icons a:nth-child(1) {
+  background: #4267b2;
+}
+.top .media-icons a:nth-child(1):hover {
+  color: #4267b2;
+  background: #fff;
+}
+.top .media-icons a:nth-child(2) {
+  background: #1da1f2;
+}
+.top .media-icons a:nth-child(2):hover {
+  color: #1da1f2;
+  background: #fff;
+}
+.top .media-icons a:nth-child(3) {
+  background: #e1306c;
+}
+.top .media-icons a:nth-child(3):hover {
+  color: #e1306c;
+  background: #fff;
+}
+.top .media-icons a:nth-child(4) {
+  background: #0077b5;
+}
+.top .media-icons a:nth-child(4):hover {
+  color: #0077b5;
+  background: #fff;
+}
+.top .media-icons a:nth-child(5) {
+  background: #ff0000;
+}
+.top .media-icons a:nth-child(5):hover {
+  color: #ff0000;
+  background: #fff;
+}
+footer .content .link-boxes {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+footer .content .link-boxes .box {
+  width: calc(100% / 5 - 10px);
+}
+.content .link-boxes .box .link_name {
+  color: rgb(0, 0, 0);
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 10px;
+  position: relative;
+}
+.link-boxes .box .link_name::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  height: 2px;
+  width: 35px;
+  background: rgb(0, 0, 0);
+}
+.content .link-boxes .box li {
+  margin: 6px 0;
+  list-style: none;
+}
+.content .link-boxes .box li a {
+  color: rgb(0, 0, 0);
+  font-size: 14px;
+  font-weight: 400;
+  text-decoration: none;
+  opacity: 0.8;
+  transition: all 0.4s ease;
+}
+.content .link-boxes .box li a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+.content .link-boxes .input-box {
+  margin-right: 55px;
+}
+.link-boxes .input-box input {
+  height: 40px;
+  width: calc(100% + 55px);
+  outline: none;
+  border: 2px solid #afafb6;
+  background: #140b5c;
+  border-radius: 4px;
+  padding: 0 15px;
+  font-size: 15px;
+  color: #fff;
+  margin-top: 5px;
+}
+.link-boxes .input-box input::placeholder {
+  color: #afafb6;
+  font-size: 16px;
+}
+.link-boxes .input-box input[type="button"] {
+  background: #fff;
+  color: #140b5c;
+  border: none;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 4px 0;
+  opacity: 0.8;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+.input-box input[type="button"]:hover {
+  opacity: 1;
+}
+footer .bottom-details {
+  width: 100%;
+  background: #2c303a;
+}
+footer .bottom-details .bottom_text {
+  max-width: 1250px;
+  margin: auto;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+}
+.bottom-details .bottom_text span,
+.bottom-details .bottom_text a {
+  font-size: 14px;
+  font-weight: 300;
+  color: #fff;
+  opacity: 0.8;
+  text-decoration: none;
+}
+.bottom-details .bottom_text a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+.bottom-details .bottom_text a {
+  margin-right: 10px;
+}
+@media (max-width: 900px) {
+  footer .content .link-boxes {
+    flex-wrap: wrap;
+  }
+  footer .content .link-boxes .input-box {
+    width: 40%;
+    margin-top: 10px;
+  }
+}
+@media (max-width: 700px) {
+  footer {
+    position: relative;
+  }
+  .content .top .logo-details {
+    font-size: 26px;
+  }
+  .content .top .media-icons a {
+    height: 35px;
+    width: 35px;
+    font-size: 14px;
+    line-height: 35px;
+  }
+  footer .content .link-boxes .box {
+    width: calc(100% / 3 - 10px);
+  }
+  footer .content .link-boxes .input-box {
+    width: 60%;
+  }
+  .bottom-details .bottom_text span,
+  .bottom-details .bottom_text a {
+    font-size: 12px;
+  }
+}
+@media (max-width: 520px) {
+  footer::before {
+    top: 145px;
+  }
+  footer .content .top {
+    flex-direction: column;
+  }
+  .content .top .media-icons {
+    margin-top: 16px;
+  }
+  footer .content .link-boxes .box {
+    width: calc(100% / 2 - 10px);
+  }
+  footer .content .link-boxes .input-box {
+    width: 100%;
+  }
+}
+/*footer*/
+
+.earth {
+  float: right;
+  right: 400px;
+  position: relative;
+  max-width: 50%;
+  display: block;
+  transform: translateY(-50px);
+}
+
+</style>
+<script>
+    let allQuestions = document.querySelectorAll("#faqs .question");
+for (let p = 0; p < allQuestions.length; p++) {
+    allQuestions[p].children[1].classList.add("invisible");
+    allQuestions[p].children[0].innerHTML = '<i class="fas fa-plus-circle"></i> ' + allQuestions[p].children[0].innerHTML
+    allQuestions[p].addEventListener("click", function (event) {
+        this.children[1].classList.toggle("invisible");
+        this.children[1].classList.toggle("normal-height");
+        var contentHeight = $(allQuestions[p].children[1]).outerHeight(true) + 25;
+        $(allQuestions[p]).animate({ "height": contentHeight }, 200);
+    })
+}
+let allLinks = document.querySelectorAll("a");
+for (let i = 0; i < allLinks.length; i++) {
+    if (allLinks[i].getAttribute("href") === null) continue;
+    if (allLinks[i].getAttribute("href").startsWith("/") || allLinks[i].getAttribute("href").startsWith("#")) continue;
+    allLinks[i].target = "_blank"
+}
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+window.addEventListener('click', function (e) {
+    if (document.getElementsByClassName('mobile')[0].contains(e.target)) {
+        // Clicked in box
+    } else {
+        hideMobileNavbar();
+    }
+});
+async function showMobileNavbar() {
+    document.getElementsByClassName("right-navbar")[0].style.left = "10px";
+    document.getElementsByClassName("top-bar")[0].style.top = "-61px";
+    await sleep(500)
+    document.getElementsByClassName("right-navbar")[0].style.left = "0px";
+}
+function hideMobileNavbar() {
+    document.getElementsByClassName("right-navbar")[0].style.left = "-500px";
+    document.getElementsByClassName("top-bar")[0].style.top = "0";
+}
+function toggleMobileNavbar() {
+    if (document.getElementsByClassName("right-navbar")[0].style.left !== "0px") {
+        showMobileNavbar();
+    } else {
+        hideMobileNavbar();
+    }
+}
+
+var modalOpen = false;
+    function join() {
+        if (modalOpen === true) return;
+        document.querySelectorAll(".body")[0].classList.add("opaque");
+        document.querySelectorAll(".signup-modal")[0].classList.remove('notvisible')
+        setTimeout(function () { modalOpen = true; }, 100)
+    }
+    document.addEventListener("click", function (event) {
+        if (modalOpen === false) return;
+        var isClickInsideElement = document.querySelectorAll(".signup-modal")[0].contains(event.target);
+        if (!isClickInsideElement) {
+            document.querySelectorAll(".body")[0].classList.remove("opaque");
+            document.querySelectorAll(".signup-modal")[0].classList.add('notvisible');
+            modalOpen = false;
+        }
+    })
+    function removeEvntLisnr(el) {
+        elClone = el.cloneNode(true);
+
+        el.parentNode.replaceChild(elClone, el);
+    }
+    function sendForm() {
+        let name = document.getElementById("signup-name").value;
+        let email = document.getElementById("signup-email").value;
+        let xp = document.getElementById("signup-xp").value;
+        var bad = false;
+        if (name === "") {
+            bad = true;
+            document.querySelectorAll("[for=signup-name]")[1].innerText = "This field is required!";
+        } else {
+            document.querySelectorAll("[for=signup-name]")[1].innerHTML = "&nbsp";
+        }
+
+        if (email === "") {
+            bad = true;
+            document.querySelectorAll("[for=signup-email]")[1].innerText = "This field is required!";
+        } else {
+            document.querySelectorAll("[for=signup-email]")[1].innerHTML = "&nbsp";
+        }
+
+        if (xp === "") {
+            bad = true;
+            document.querySelectorAll("[for=signup-xp]")[1].innerText = "This field is required!";
+        } else {
+            document.querySelectorAll("[for=signup-xp]")[1].innerHTML = "&nbsp";
+        }
+        if (Number(xp) > 10) {
+            document.querySelectorAll("[for=signup-xp]")[1].innerText = "A number from 1-10 please!";
+            bad = true;
+        } else {
+            document.querySelectorAll("[for=signup-xp]")[1].innerHTML = "&nbsp";
+        }
+        requiredMessages();
+        if (validateEmail(email) === false) {
+            bad = true;
+            document.querySelectorAll("[for=signup-email]")[1].innerText = "Valid emails please!";
+        } else {
+            document.querySelectorAll("[for=signup-xp]")[1].innerHTML = "&nbsp";
+        }
+        if (bad === true) return;
+        fetch("https://vividhacks-backend.vercel.app/api/endpoint?query=waitlist", {
+            method: "POST",
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                email: email,
+                name: name,
+                level: Number(xp)
+            })
+        }).then(function(res){return res.text()}).then(function(result){
+            alert(result)
+        })
+    }
+    function requiredMessages() {
+        document.addEventListener("keypress", function () {
+            setTimeout(next, 10);
+            function next() {
+                let name = document.getElementById("signup-name").value;
+                let email = document.getElementById("signup-email").value;
+                let xp = document.getElementById("signup-xp").value;
+
+                if (name === "") {
+                    bad = true;
+                    document.querySelectorAll("[for=signup-name]")[1].innerText = "This field is required!";
+                } else {
+                    document.querySelectorAll("[for=signup-name]")[1].innerHTML = "&nbsp";
+                }
+
+                if (email === "") {
+                    bad = true;
+                    document.querySelectorAll("[for=signup-email]")[1].innerText = "This field is required!";
+                } else {
+                    document.querySelectorAll("[for=signup-email]")[1].innerHTML = "&nbsp";
+                }
+
+                if (xp === "") {
+                    bad = true;
+                    document.querySelectorAll("[for=signup-xp]")[1].innerText = "This field is required!";
+                } else {
+                    document.querySelectorAll("[for=signup-xp]")[1].innerHTML = "&nbsp";
+                }
+                if (Number(xp) > 10) {
+                    document.querySelectorAll("[for=signup-xp]")[1].innerText = "A number from 1-10 please!";
+                    bad = true;
+                } else {
+                    document.querySelectorAll("[for=signup-xp]")[1].innerHTML = "&nbsp";
+                }
+                if (validateEmail(email) === false) {
+                    bad = true;
+                    document.querySelectorAll("[for=signup-email]")[1].innerText = "Valid emails please!";
+                } else {
+                    document.querySelectorAll("[for=signup-xp]")[1].innerHTML = "&nbsp";
+                }
+            }
+        })
+    }
+    function validateEmail(emailAdress) {
+        let regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        if (emailAdress.match(regexEmail)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+</script>
